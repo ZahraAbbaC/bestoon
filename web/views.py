@@ -18,7 +18,9 @@ def submit_expense(request):
     if 'date' not in request.POST:
         now = datetime.now()
     this_token = request.POST['token']
+    print (this_token)
     this_user = User.objects.filter(token__token=this_token).get()
+    print ("hello2")
     Expense.objects.create(user=this_user, amount=request.POST['amount'],
                            text=request.POST['text'], date=now)
     #print ("i'm in submit expense")
