@@ -48,13 +48,3 @@ def submit_income(request):
     return JsonResponse({
         'status': 'ok',
     }, encoder=JSONEncoder)
-
-
-
-
-
-
-
-
-
-
